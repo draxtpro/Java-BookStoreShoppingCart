@@ -57,11 +57,19 @@ public class ShoppingCart {
     }
 
     public void deleteCartItem(int index) {
-     try{
-      cartItems.remove(index);
-     } catch (IndexOutOfBoundsException exception){
+        try {
+            cartItems.remove(index);
+        } catch (IndexOutOfBoundsException exception) {
 
-     }
+        }
+    }
+
+    public void updateCartItem(int index, int quantity) {
+        try {
+            cartItems.get(index).setQuantity(quantity);
+        } catch (IndexOutOfBoundsException exception) {
+
+        }
     }
 
 }
